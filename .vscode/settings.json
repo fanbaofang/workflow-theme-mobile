@@ -1,0 +1,18 @@
+// 将设置放入此文件中以覆盖默认值和用户设置。
+{
+    "files.autoSave": "afterDelay",
+    "explorer.openEditors.visible": 0,
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vs-seti",
+    "explorer.autoReveal": false,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "less.compile": {
+        "sourceMap": true,
+        "compress": false,
+        "out": "../dist/css/workflow-theme-mobile.css",
+        "main": "./workflow-theme-mobile.less"
+    }
+}
