@@ -1,7 +1,7 @@
 {
   "name": "workflow-theme.mobile",
   "description": "Lzzy of workflow theme, mobile project",
-  "main": "Gruntfile.js",
+  "main": "less/workfloe-theme.mobile.less",
   "authors": [
     "yu jinxian"
   ],
