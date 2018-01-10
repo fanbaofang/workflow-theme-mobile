@@ -1,0 +1,25 @@
+{
+  "name": "workflow-theme.mobile",
+  "description": "Lzzy of workflow theme, mobile project",
+  "main": "Gruntfile.js",
+  "authors": [
+    "yu jinxian"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mobile"
+  ],
+  "homepage": "https://github.com/europeancastle/workflow-theme.mobile",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "jquery-validation": "^1.17.0"
+  }
+}
