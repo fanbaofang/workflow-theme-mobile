@@ -1,0 +1,39 @@
+{
+  "name": "workflow-theme.mobile",
+  "version": "1.0.0",
+  "description": "Lzzy of workflow theme, mobile project",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/europeancastle/workflow-theme.mobile.git"
+  },
+  "keywords": [
+    "mobile"
+  ],
+  "author": "yu jinxian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/europeancastle/workflow-theme.mobile/issues"
+  },
+  "homepage": "https://github.com/europeancastle/workflow-theme.mobile#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "grunt-contrib-less": "^1.4.1",
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}
