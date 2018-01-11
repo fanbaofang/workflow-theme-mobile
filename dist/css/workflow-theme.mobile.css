@@ -2906,7 +2906,7 @@ select[multiple].input-lg {
   }
   .form-inline .form-control {
     display: inline-block;
-    width: auto;
+    width: 150px;
     vertical-align: middle;
   }
   .form-inline .form-control-static {
@@ -4361,7 +4361,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-form .form-control {
     display: inline-block;
-    width: auto;
+    width: 150px;
     vertical-align: middle;
   }
   .navbar-form .form-control-static {
@@ -5218,13 +5218,8 @@ a.thumbnail.active {
   position: relative;
   display: block;
   padding: 10px 15px;
-  margin-bottom: -1px;
   background-color: #fff;
-  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-}
-.list-group-item:last-child {
-  margin-bottom: 0;
 }
 a.list-group-item,
 button.list-group-item {
