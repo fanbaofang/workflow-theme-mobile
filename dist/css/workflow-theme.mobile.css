@@ -5218,8 +5218,9 @@ a.thumbnail.active {
   position: relative;
   display: block;
   padding: 10px 15px;
+  margin-bottom: -1px;
   background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 a.list-group-item,
 button.list-group-item {
