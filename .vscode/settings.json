@@ -12,7 +12,7 @@
     "less.compile": {
         "sourceMap": true,
         "compress": false,
-        "out": "../dist/css/workflow-theme.mobile.css",
-        "main": "./workflow-theme.mobile.less"
+        "out": "../dist/css/workflow-theme-mobile.css",
+        "main": "./workflow-theme-mobile.less"
     }
 }

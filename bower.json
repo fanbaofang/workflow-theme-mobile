@@ -1,7 +1,7 @@
 {
-  "name": "workflow-theme.mobile",
+  "name": "workflow-theme-mobile",
   "description": "Lzzy of workflow theme, mobile project",
-  "main": "less/workfloe-theme.mobile.less",
+  "main": "less/workfloe-theme-mobile.less",
   "authors": [
     "yu jinxian"
   ],
@@ -9,7 +9,7 @@
   "keywords": [
     "mobile"
   ],
-  "homepage": "https://github.com/europeancastle/workflow-theme.mobile",
+  "homepage": "https://github.com/europeancastle/workflow-theme-mobile",
   "ignore": [
     "**/.*",
     "node_modules",
