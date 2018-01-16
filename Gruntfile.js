@@ -7,15 +7,15 @@ module.exports = function(grunt) {
                     sourceMap: true
                 },
                 files: {
-                    'dist/css/workflow-theme.mobile.css': 'less/workflow-theme.mobile.less'
+                    'dist/css/workflow-theme.mobile.css': 'less/workflow-theme-mobile.less'
                 }
             }
         },
         cssmin: {
             dist: {
                 files: {
-                    'dist/css/workflow-theme.mobile.min.css': [
-                        'dist/css/workflow-theme.mobile.css'
+                    'dist/css/workflow-theme-mobile.min.css': [
+                        'dist/css/workflow-theme-mobile.css'
                     ]
                 }
             }
@@ -25,14 +25,14 @@ module.exports = function(grunt) {
                 src: [
                     'js/*.js'
                 ],
-                dest: 'dist/js/workflow-theme.mobile.js',
+                dest: 'dist/js/workflow-theme-mobile.js',
             },
         },
         uglify: {
             dist: {
                 files: {
-                    'dist/js/workflow-theme.mobile.min.js': [
-                        'dist/js/workflow-theme.mobile.js'
+                    'dist/js/workflow-theme-mobile.min.js': [
+                        'dist/js/workflow-theme-mobile.js'
                     ]
                 }
             }

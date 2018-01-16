@@ -4679,7 +4679,6 @@ a.thumbnail.active {
   margin-bottom: -2px;
   background-color: #fff;
   border: 1px solid #ddd;
-  line-height: 50px;
 }
 a.list-group-item,
 button.list-group-item {
@@ -6161,4 +6160,4 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=./workflow-theme.mobile.css.map */
+/*# sourceMappingURL=./workflow-theme-mobile.css.map */
