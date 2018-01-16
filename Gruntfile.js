@@ -44,8 +44,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['cssmin:dist', 'concat:dist',
-        'uglify:dist'
-    ]);
+    grunt.registerTask('default', ['cssmin:dist', 'concat:dist', 'uglify:dist']);
     grunt.registerTask('less', ['less:dist']);
 }
