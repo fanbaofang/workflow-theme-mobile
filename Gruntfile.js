@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     sourceMap: true
                 },
                 files: {
-                    'dist/css/workflow-theme.mobile.css': 'less/workflow-theme-mobile.less'
+                    'dist/css/workflow-theme-mobile.css': 'less/workflow-theme-mobile.less'
                 }
             }
         },
