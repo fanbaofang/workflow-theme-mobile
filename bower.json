@@ -1,25 +1,27 @@
 {
-  "name": "workflow-theme.mobile",
-  "description": "Lzzy of workflow theme, mobile project",
-  "main": "less/workfloe-theme.mobile.less",
-  "authors": [
-    "yu jinxian"
-  ],
-  "license": "ISC",
-  "keywords": [
-    "mobile"
-  ],
-  "homepage": "https://github.com/europeancastle/workflow-theme.mobile",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "devdependencies": {
-    "jquery": "^3.2.1",
-    "bootstrap": "^3.3.7",
-    "jquery-validation": "^1.17.0"
-  }
+    "name": "workflow-theme-mobile",
+    "homepage": "https://github.com/europeancastle/workflow-theme-mobile",
+    "authors": [
+        "epcastle",
+        "sophie"
+    ],
+    "description": "lzzy for a workflow theme mobile project.",
+    "main": "less/workflow-theme-mobile.less",
+    "keywords": [
+        "workflow"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devdependencies": {},
+    "devDependencies": {
+        "jquery": "^3.2.1",
+        "bootstrap": "^3.3.7",
+        "jquery-validation": "^1.17.0"
+    }
 }
