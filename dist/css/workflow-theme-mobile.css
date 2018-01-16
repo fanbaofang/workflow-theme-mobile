@@ -4684,6 +4684,22 @@ a.thumbnail.active {
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
+.list-group-item:before,
+.list-group-item:after {
+  content: " ";
+  display: table;
+}
+.list-group-item:after {
+  clear: both;
+}
+.list-group-item:before,
+.list-group-item:after {
+  content: " ";
+  display: table;
+}
+.list-group-item:after {
+  clear: both;
+}
 a.list-group-item,
 button.list-group-item {
   color: #555;
