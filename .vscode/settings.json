@@ -2,10 +2,11 @@
 {
     "files.autoSave": "afterDelay",
     "explorer.openEditors.visible": 0,
+    "explorer.autoReveal": true,
     "editor.formatOnSave": true,
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "vs-seti",
-    "explorer.autoReveal": false,
+    "workbench.startupEditor": "none",
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
