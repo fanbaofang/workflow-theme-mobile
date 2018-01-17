@@ -9,41 +9,69 @@
     <script src="../dist/js/workflow-theme-mobile.js"></script>
 </head>
 <body>
-    <form class="form-inline">
-        <div class="form-group">
-            <label for="exampleInputName2">办理部门</label>
-            <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-            </select>
-            <div>11</div>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-            <div>22</div>
-            <textarea class="form-control" rows="3"></textarea>
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <a class="navbar-brand" href="#">AAA浏览</a>
         </div>
-    </form>
-    <form class="form-inline">
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-addon">$</div>
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                <div class="input-group-addon">.00</div>
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索关键字">
             </div>
-        </div>
-    </form>
-    <form class="form-inline">
-        <div class="form-group">
-            <label for="exampleInputName2">Name</label>
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail2">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-        </div>
-        <button type="submit" class="btn btn-default">Send invitation</button>
-    </form>
+            <span class="glyphicon glyphicon-refresh"></span>
+        </form>
+    </nav>
+    <article>
+        <!-- 块级表单 -->
+        <form role="form" class="form-inline">
+            <div class="form-group">
+                <label>块级表单</label>
+                <input type="text" class="form-control" placeholder="请输入名称">
+            </div>
+        </form>
+        <!-- 内联表单 -->
+        <form class="form-inline">
+            <div class="form-group">
+                <label>内联表单</label>
+                <input type="text" placeholder="请输入名称" class="form-control"> ——
+                <input type="text" placeholder="请输入名称" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="name">选择列表</label>
+                <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="name">选择列表</label>
+                <select class="form-control">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                        </select>
+            </div>
+            <div class="form-group">
+                <label class="">内联文本域</label>
+                <textarea class="form-control" rows="3" cols="8"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="name">文本框</label>
+                <textarea class="form-control block" rows="5"></textarea>
+            </div>
+        </form>
+        <form role="form">
+            <div class="form-group">
+                <label for="name">文本框</label>
+                <textarea class="form-control" rows="10"></textarea>
+            </div>
+        </form>
+    </article>
+
 </body>
 </html>
