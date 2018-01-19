@@ -23,7 +23,10 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'js/*.js'
+                    'js/modal.js',
+                    'js/dropdown.js',
+                    'js/tooltip.js',
+                    'js/popver.js'
                 ],
                 dest: 'dist/js/workflow-theme-mobile.js',
             },
