@@ -27,14 +27,12 @@
 .dropup,
 .dropdown {
     position: relative;
-    .btn-group {
-        .btn {
+    .btn {
+        border: none!important;
+        background: transparent;
+        &.active {
             border: none!important;
             background: transparent;
-            &.active {
-                border: none!important;
-                background: transparent;
-            }
         }
     }
 }
@@ -94,16 +92,17 @@
 }
 
 // Active state
-// .dropdown-menu>.active>a {
-//     &,
-//     &:hover,
-//     &:focus {
-//         color: @dropdown-link-active-color;
-//         text-decoration: none;
-//         outline: 0;
-//         background-color: @dropdown-link-active-bg;
-//     }
-// }
+.dropdown-menu>.active>a {
+    &,
+    &:hover,
+    &:focus {
+        color: @dropdown-link-active-color;
+        text-decoration: none;
+        outline: 0;
+        background-color: @dropdown-link-active-bg;
+    }
+}
+
 .dropdown-menu>.disabled>a {
     &,
     &:hover,

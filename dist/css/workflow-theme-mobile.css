@@ -3499,13 +3499,13 @@ tbody.collapse.in {
 .dropdown {
   position: relative;
 }
-.dropup .btn-group .btn,
-.dropdown .btn-group .btn {
+.dropup .btn,
+.dropdown .btn {
   border: none!important;
   background: transparent;
 }
-.dropup .btn-group .btn.active,
-.dropdown .btn-group .btn.active {
+.dropup .btn.active,
+.dropdown .btn.active {
   border: none!important;
   background: transparent;
 }
@@ -3560,6 +3560,14 @@ tbody.collapse.in {
   text-decoration: none;
   color: #262626;
   background-color: #f5f5f5;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #ffffff;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
