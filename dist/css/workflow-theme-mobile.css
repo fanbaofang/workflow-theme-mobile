@@ -3482,16 +3482,25 @@ tbody.collapse.in {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
+.toggle-title {
+  font-weight: 600;
+  font-size: 16px;
+}
 .caret {
   display: inline-block;
   width: 0;
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid \9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+  border-top: 7px dashed;
+  border-top: 7px solid \9;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  color: #68a4f2;
+}
+.show-toggle {
+  color: #68a4f2;
+  margin: 0 8px;
 }
 .dropup,
 .dropdown {
@@ -3502,18 +3511,18 @@ tbody.collapse.in {
 }
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
+  top: 7px;
+  left: 94px;
+  z-index: -100;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 85;
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
   font-size: 14px;
   text-align: left;
-  background-color: #fff;
+  background-color: #eeeeee;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -3531,13 +3540,17 @@ tbody.collapse.in {
   overflow: hidden;
   background-color: #e5e5e5;
 }
+.dropdown-menu > li:last-child > a {
+  border-bottom: none;
+}
 .dropdown-menu > li > a {
   display: block;
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333333;
+  border-bottom: 1px solid #b0b0b0;
+  color: #b0b0b0;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -3595,7 +3608,7 @@ tbody.collapse.in {
   right: 0;
   bottom: 0;
   top: 0;
-  z-index: 990;
+  z-index: -110;
 }
 .pull-right > .dropdown-menu {
   right: 0;
@@ -3604,8 +3617,8 @@ tbody.collapse.in {
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
-  border-bottom: 4px dashed;
-  border-bottom: 4px solid \9;
+  border-bottom: 7px dashed;
+  border-bottom: 7px solid \9;
   content: "";
 }
 .dropup .dropdown-menu,
