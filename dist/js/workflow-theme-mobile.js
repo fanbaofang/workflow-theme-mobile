@@ -1,177 +1,4 @@
 /* ========================================================================
- * Bootstrap: dropdown.js v3.3.7
- * http://getbootstrap.com/javascript/#dropdowns
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-
-+ function($) {
-    'use strict';
-
-    // DROPDOWN CLASS DEFINITION
-    // =========================
-
-    var backdrop = '.dropdown-backdrop'
-    var toggle = '[data-toggle="dropdown"]'
-    var Dropdown = function(element) {
-        $(element).on('click.bs.dropdown', this.toggle)
-    }
-
-    Dropdown.VERSION = '3.3.7'
-
-    function getParent($this) {
-        var selector = $this.attr('data-target')
-
-        if (!selector) {
-            selector = $this.attr('href')
-            selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/,
-                '') // strip for ie7
-        }
-
-        var $parent = selector && $(selector)
-
-        return $parent && $parent.length ? $parent : $this.parent()
-    }
-
-    function clearMenus(e) {
-        if (e && e.which === 3) return
-        $(backdrop).remove()
-        $(toggle).each(function() {
-            var $this = $(this)
-            var $parent = getParent($this)
-            var relatedTarget = {
-                relatedTarget: this
-            }
-
-            if (!$parent.hasClass('open')) return
-
-            if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains(
-                    $parent[0], e.target)) return
-
-            $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
-
-            if (e.isDefaultPrevented()) return
-
-            $this.attr('aria-expanded', 'false')
-            $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
-        })
-    }
-
-    Dropdown.prototype.toggle = function(e) {
-        var $this = $(this)
-
-        if ($this.is('.disabled, :disabled')) return
-
-        var $parent = getParent($this)
-        var isActive = $parent.hasClass('open')
-
-        clearMenus()
-
-        if (!isActive) {
-            if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
-                // if mobile we use a backdrop because click events don't delegate
-                $(document.createElement('div'))
-                    .addClass('dropdown-backdrop')
-                    .insertAfter($(this))
-                    .on('click', clearMenus)
-            }
-
-            var relatedTarget = {
-                relatedTarget: this
-            }
-            $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
-
-            if (e.isDefaultPrevented()) return
-
-            $this
-                .trigger('focus')
-                .attr('aria-expanded', 'true')
-
-            $parent
-                .toggleClass('open')
-                .trigger($.Event('shown.bs.dropdown', relatedTarget))
-        }
-
-        return false
-    }
-
-    Dropdown.prototype.keydown = function(e) {
-        if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
-
-        var $this = $(this)
-
-        e.preventDefault()
-        e.stopPropagation()
-
-        if ($this.is('.disabled, :disabled')) return
-
-        var $parent = getParent($this)
-        var isActive = $parent.hasClass('open')
-
-        if (!isActive && e.which != 27 || isActive && e.which == 27) {
-            if (e.which == 27) $parent.find(toggle).trigger('focus')
-            return $this.trigger('click')
-        }
-
-        var desc = ' li:not(.disabled):visible a'
-        var $items = $parent.find('.dropdown-menu' + desc)
-
-        if (!$items.length) return
-
-        var index = $items.index(e.target)
-
-        if (e.which == 38 && index > 0) index-- // up
-            if (e.which == 40 && index < $items.length - 1) index++ // down
-                if (!~index) index = 0
-
-        $items.eq(index).trigger('focus')
-    }
-
-
-    // DROPDOWN PLUGIN DEFINITION
-    // ==========================
-
-    function Plugin(option) {
-        return this.each(function() {
-            var $this = $(this)
-            var data = $this.data('bs.dropdown')
-
-            if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
-            if (typeof option == 'string') data[option].call($this)
-        })
-    }
-
-    var old = $.fn.dropdown
-
-    $.fn.dropdown = Plugin
-    $.fn.dropdown.Constructor = Dropdown
-
-
-    // DROPDOWN NO CONFLICT
-    // ====================
-
-    $.fn.dropdown.noConflict = function() {
-        $.fn.dropdown = old
-        return this
-    }
-
-
-    // APPLY TO STANDARD DROPDOWN ELEMENTS
-    // ===================================
-
-    $(document)
-        .on('click.bs.dropdown.data-api', clearMenus)
-        .on('click.bs.dropdown.data-api', '.dropdown form', function(e) {
-            e.stopPropagation()
-        })
-        .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
-        .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
-        .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
-
-}(jQuery);
-/* ========================================================================
  * Bootstrap: modal.js v3.3.7
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
@@ -512,114 +339,178 @@
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: popover.js v3.3.7
- * http://getbootstrap.com/javascript/#popovers
+ * Bootstrap: dropdown.js v3.3.7
+ * http://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
 
-+function ($) {
-  'use strict';
++ function($) {
+    'use strict';
 
-  // POPOVER PUBLIC CLASS DEFINITION
-  // ===============================
+    // DROPDOWN CLASS DEFINITION
+    // =========================
 
-  var Popover = function (element, options) {
-    this.init('popover', element, options)
-  }
+    var backdrop = '.dropdown-backdrop'
+    var toggle = '[data-toggle="dropdown"]'
+    var Dropdown = function(element) {
+        $(element).on('click.bs.dropdown', this.toggle)
+    }
 
-  if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
+    Dropdown.VERSION = '3.3.7'
 
-  Popover.VERSION  = '3.3.7'
+    function getParent($this) {
+        var selector = $this.attr('data-target')
 
-  Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
-    placement: 'right',
-    trigger: 'click',
-    content: '',
-    template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
-  })
+        if (!selector) {
+            selector = $this.attr('href')
+            selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/,
+                '') // strip for ie7
+        }
+
+        var $parent = selector && $(selector)
+
+        return $parent && $parent.length ? $parent : $this.parent()
+    }
+
+    function clearMenus(e) {
+        if (e && e.which === 3) return
+        $(backdrop).remove()
+        $(toggle).each(function() {
+            var $this = $(this)
+            var $parent = getParent($this)
+            var relatedTarget = {
+                relatedTarget: this
+            }
+
+            if (!$parent.hasClass('open')) return
+
+            if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains(
+                    $parent[0], e.target)) return
+
+            $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+
+            if (e.isDefaultPrevented()) return
+
+            $this.attr('aria-expanded', 'false')
+            $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
+        })
+    }
+
+    Dropdown.prototype.toggle = function(e) {
+        var $this = $(this)
+
+        if ($this.is('.disabled, :disabled')) return
+
+        var $parent = getParent($this)
+        var isActive = $parent.hasClass('open')
+
+        clearMenus()
+
+        if (!isActive) {
+            if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+                // if mobile we use a backdrop because click events don't delegate
+                $(document.createElement('div'))
+                    .addClass('dropdown-backdrop')
+                    .insertAfter($(this))
+                    .on('click', clearMenus)
+            }
+
+            var relatedTarget = {
+                relatedTarget: this
+            }
+            $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
+
+            if (e.isDefaultPrevented()) return
+
+            $this
+                .trigger('focus')
+                .attr('aria-expanded', 'true')
+
+            $parent
+                .toggleClass('open')
+                .trigger($.Event('shown.bs.dropdown', relatedTarget))
+        }
+
+        return false
+    }
+
+    Dropdown.prototype.keydown = function(e) {
+        if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+
+        var $this = $(this)
+
+        e.preventDefault()
+        e.stopPropagation()
+
+        if ($this.is('.disabled, :disabled')) return
+
+        var $parent = getParent($this)
+        var isActive = $parent.hasClass('open')
+
+        if (!isActive && e.which != 27 || isActive && e.which == 27) {
+            if (e.which == 27) $parent.find(toggle).trigger('focus')
+            return $this.trigger('click')
+        }
+
+        var desc = ' li:not(.disabled):visible a'
+        var $items = $parent.find('.dropdown-menu' + desc)
+
+        if (!$items.length) return
+
+        var index = $items.index(e.target)
+
+        if (e.which == 38 && index > 0) index-- // up
+            if (e.which == 40 && index < $items.length - 1) index++ // down
+                if (!~index) index = 0
+
+        $items.eq(index).trigger('focus')
+    }
 
 
-  // NOTE: POPOVER EXTENDS tooltip.js
-  // ================================
+    // DROPDOWN PLUGIN DEFINITION
+    // ==========================
 
-  Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype)
+    function Plugin(option) {
+        return this.each(function() {
+            var $this = $(this)
+            var data = $this.data('bs.dropdown')
 
-  Popover.prototype.constructor = Popover
+            if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
+            if (typeof option == 'string') data[option].call($this)
+        })
+    }
 
-  Popover.prototype.getDefaults = function () {
-    return Popover.DEFAULTS
-  }
+    var old = $.fn.dropdown
 
-  Popover.prototype.setContent = function () {
-    var $tip    = this.tip()
-    var title   = this.getTitle()
-    var content = this.getContent()
-
-    $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
-    $tip.find('.popover-content').children().detach().end()[ // we use append for html objects to maintain js events
-      this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
-    ](content)
-
-    $tip.removeClass('fade top bottom left right in')
-
-    // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
-    // this manually by checking the contents.
-    if (!$tip.find('.popover-title').html()) $tip.find('.popover-title').hide()
-  }
-
-  Popover.prototype.hasContent = function () {
-    return this.getTitle() || this.getContent()
-  }
-
-  Popover.prototype.getContent = function () {
-    var $e = this.$element
-    var o  = this.options
-
-    return $e.attr('data-content')
-      || (typeof o.content == 'function' ?
-            o.content.call($e[0]) :
-            o.content)
-  }
-
-  Popover.prototype.arrow = function () {
-    return (this.$arrow = this.$arrow || this.tip().find('.arrow'))
-  }
+    $.fn.dropdown = Plugin
+    $.fn.dropdown.Constructor = Dropdown
 
 
-  // POPOVER PLUGIN DEFINITION
-  // =========================
+    // DROPDOWN NO CONFLICT
+    // ====================
 
-  function Plugin(option) {
-    return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.popover')
-      var options = typeof option == 'object' && option
-
-      if (!data && /destroy|hide/.test(option)) return
-      if (!data) $this.data('bs.popover', (data = new Popover(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  var old = $.fn.popover
-
-  $.fn.popover             = Plugin
-  $.fn.popover.Constructor = Popover
+    $.fn.dropdown.noConflict = function() {
+        $.fn.dropdown = old
+        return this
+    }
 
 
-  // POPOVER NO CONFLICT
-  // ===================
+    // APPLY TO STANDARD DROPDOWN ELEMENTS
+    // ===================================
 
-  $.fn.popover.noConflict = function () {
-    $.fn.popover = old
-    return this
-  }
+    $(document)
+        .on('click.bs.dropdown.data-api', clearMenus)
+        .on('click.bs.dropdown.data-api', '.dropdown form', function(e) {
+            e.stopPropagation()
+        })
+        .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+        .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+        .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
 
 }(jQuery);
-
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.7
  * http://getbootstrap.com/javascript/#tooltip
