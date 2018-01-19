@@ -3516,7 +3516,7 @@ tbody.collapse.in {
   position: absolute;
   top: 6px;
   left: 14px;
-  z-index: -100;
+  z-index: 1000;
   display: none;
   float: left;
   min-width: 85;
@@ -3610,7 +3610,7 @@ tbody.collapse.in {
   right: 0;
   bottom: 0;
   top: 0;
-  z-index: -110;
+  z-index: 990;
 }
 .pull-right > .dropdown-menu {
   right: 0;
