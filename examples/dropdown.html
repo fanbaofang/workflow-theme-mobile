@@ -23,26 +23,20 @@
     <article>
         <!-- 下拉菜单 -->
         <div class="dropdown">
-            <div class="dropdown-toggle" data-toggle="dropdown">
-                <span class="toggle-title">属于</span>
-                <span class="show-toggle">[哈哈]</span>
-                <span class="caret" data-toggle="dropdown"></span>
+            
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">切换下拉菜单</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">功能</a></li>
+                    <li><a href="#">另一个功能</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
             </div>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1">哈</a>
-                </li>
-                <li>
-                    <a role="menuitem" tabindex="-1">哈哈</a>
-                </li>
-                <li>
-                    <a role="menuitem" tabindex="-1">哈哈哈</a>
-                </li>
-                <li>
-                    <a role="menuitem" tabindex="-1">哈哈哈哈</a>
-                </li>
-            </ul>
         </div>
+
     </article>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../dist/js/workflow-theme-mobile.js"></script>

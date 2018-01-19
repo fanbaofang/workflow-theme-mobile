@@ -27,6 +27,16 @@
 .dropup,
 .dropdown {
     position: relative;
+    .btn-group {
+        .btn {
+            border: none!important;
+            background: transparent;
+            &.active {
+                border: none!important;
+                background: transparent;
+            }
+        }
+    }
 }
 
 .dropdown-toggle:focus {
@@ -35,8 +45,8 @@
 
 .dropdown-menu {
     position: absolute;
-    top: 7px;
-    left: 94px;
+    top: 6px;
+    left: 14px;
     z-index: @zindex-dropdown;
     display: none;
     float: left;
@@ -48,8 +58,7 @@
     text-align: left;
     background-color: @dropdown-bg;
     border: 1px solid @dropdown-fallback-border; // IE8 fallback
-    border: 1px solid @dropdown-border;
-    border-radius: @border-radius-base;
+    border: 1px solid @dropdown-border; //border-radius: @border-radius-base;
     .box-shadow(0 6px 12px rgba(0, 0, 0, .175));
     background-clip: padding-box;
     &.pull-right {
@@ -59,7 +68,7 @@
     .divider {
         .nav-divider(@dropdown-divider-bg);
     }
-    >li:last-child>a{
+    >li:last-child>a {
         border-bottom: none;
     }
     >li>a {
@@ -68,10 +77,9 @@
         clear: both;
         font-weight: normal;
         line-height: @line-height-base;
-        border-bottom:1px solid @dropdown-link-color;
+        border-bottom: 1px solid @dropdown-link-color;
         color: @dropdown-link-color;
         white-space: nowrap; // prevent links from randomly breaking onto new lines
-        
     }
 }
 
@@ -86,17 +94,16 @@
 }
 
 // Active state
-.dropdown-menu>.active>a {
-    &,
-    &:hover,
-    &:focus {
-        color: @dropdown-link-active-color;
-        text-decoration: none;
-        outline: 0;
-        background-color: @dropdown-link-active-bg;
-    }
-}
-
+// .dropdown-menu>.active>a {
+//     &,
+//     &:hover,
+//     &:focus {
+//         color: @dropdown-link-active-color;
+//         text-decoration: none;
+//         outline: 0;
+//         background-color: @dropdown-link-active-bg;
+//     }
+// }
 .dropdown-menu>.disabled>a {
     &,
     &:hover,
