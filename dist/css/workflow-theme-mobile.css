@@ -3475,10 +3475,6 @@ tbody.collapse.in {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.toggle-title {
-  font-weight: 600;
-  font-size: 16px;
-}
 .caret {
   display: inline-block;
   width: 0;
@@ -3491,13 +3487,10 @@ tbody.collapse.in {
   border-left: 7px solid transparent;
   color: #68a4f2;
 }
-.show-toggle {
-  color: #68a4f2;
-  margin: 0 8px;
-}
 .dropup,
 .dropdown {
   position: relative;
+  width: 203px;
 }
 .dropup .btn,
 .dropdown .btn {
@@ -4192,6 +4185,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar .navbar-right {
   float: right;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 15px;
 }
 .navbar .navbar-right span.glyphicon-refresh::before {
   color: #a8a8a8;
@@ -4199,6 +4196,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   top: 2px;
   left: 5px;
+}
+.navbar-fixed-bottom {
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 2px;
+  text-align: center;
+  z-index: 1000;
 }
 .breadcrumb {
   padding: 8px 15px;
