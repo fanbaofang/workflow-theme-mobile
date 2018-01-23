@@ -23,7 +23,9 @@ legend {
 label {
     display: inline-block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-    margin-bottom: 5px;
+    margin-bottom:7.5px;
+    margin-top: 7.5px;
+    font-size: @font-size-base;
     font-weight: bold;
 }
 
@@ -74,8 +76,7 @@ output {
 .form-control {
     display: block;
     width: 100%;
-    height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-    padding: @padding-base-vertical @padding-base-horizontal;
+    padding: 6.5px @padding-base-horizontal;
     font-size: @font-size-base;
     line-height: @line-height-base;
     color: @input-color;
@@ -411,6 +412,8 @@ input[type="checkbox"] {
 }
 
 .form-horizontal {
+    background: #fff;
+
     .radio,
     .checkbox,
     .radio-inline,
@@ -425,6 +428,7 @@ input[type="checkbox"] {
     } // Make form groups behave like rows
     .form-group {
         .make-row();
+        padding: 10px 10px;
     } // Reset spacing and right align labels, but scope to media queries so that
     @media (min-width: @screen-sm-min) {
         .control-label {

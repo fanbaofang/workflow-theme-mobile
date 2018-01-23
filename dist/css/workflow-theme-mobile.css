@@ -2498,7 +2498,9 @@ legend {
 label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+  font-size: 14px;
   font-weight: bold;
 }
 input[type="search"] {
@@ -2539,8 +2541,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 22px;
-  padding: 0px 14px;
+  padding: 6.5px 14px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2949,6 +2950,9 @@ select[multiple].input-lg {
 .form-inline .has-feedback .form-control-feedback {
   top: 0;
 }
+.form-horizontal {
+  background: #fff;
+}
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
@@ -2964,6 +2968,7 @@ select[multiple].input-lg {
 .form-horizontal .form-group {
   margin-left: -15px;
   margin-right: -15px;
+  padding: 10px 10px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
