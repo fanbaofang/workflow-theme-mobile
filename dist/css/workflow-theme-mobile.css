@@ -3438,7 +3438,8 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-block {
   display: block;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
 }
 .btn-block + .btn-block {
   margin-top: 5px;
@@ -4191,9 +4192,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar .navbar-right {
   float: right;
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 .navbar .navbar-right span.glyphicon-refresh::before {
   color: #a8a8a8;
@@ -5314,6 +5315,17 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+}
+.navbar-back {
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 2px;
+  text-align: center;
+  z-index: 1000;
 }
 .modal-open {
   overflow: hidden;
