@@ -1086,7 +1086,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #ffffff;
+  color: #000;
   text-decoration: none;
 }
 a:hover,
@@ -2498,7 +2498,9 @@ legend {
 label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+  font-size: 14px;
   font-weight: bold;
 }
 input[type="search"] {
@@ -2539,8 +2541,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 22px;
-  padding: 0px 14px;
+  padding: 6.5px 14px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2949,6 +2950,9 @@ select[multiple].input-lg {
 .form-inline .has-feedback .form-control-feedback {
   top: 0;
 }
+.form-horizontal {
+  background: #fff;
+}
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
@@ -2964,6 +2968,7 @@ select[multiple].input-lg {
 .form-horizontal .form-group {
   margin-left: -15px;
   margin-right: -15px;
+  padding: 10px 10px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
@@ -3021,13 +3026,6 @@ select[multiple].input-lg {
 .btn.focus {
   color: #333;
   text-decoration: none;
-}
-.btn:active,
-.btn.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn.disabled,
 .btn[disabled],
@@ -3440,7 +3438,8 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-block {
   display: block;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
 }
 .btn-block + .btn-block {
   margin-top: 5px;
@@ -3488,35 +3487,46 @@ tbody.collapse.in {
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid \9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+  border-top: 7px dashed;
+  border-top: 7px solid \9;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  color: #68a4f2;
 }
 .dropup,
 .dropdown {
   position: relative;
+  width: 203px;
+}
+.dropup .btn,
+.dropdown .btn {
+  border: none!important;
+  background: transparent;
+}
+.dropup .btn.active,
+.dropdown .btn.active {
+  border: none!important;
+  background: transparent;
 }
 .dropdown-toggle:focus {
   outline: 0;
 }
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 6px;
+  left: 14px;
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 85;
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
   font-size: 14px;
   text-align: left;
-  background-color: #fff;
+  background-color: #eeeeee;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
@@ -3531,13 +3541,17 @@ tbody.collapse.in {
   overflow: hidden;
   background-color: #e5e5e5;
 }
+.dropdown-menu > li:last-child > a {
+  border-bottom: none;
+}
 .dropdown-menu > li > a {
   display: block;
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333333;
+  border-bottom: 1px solid #b0b0b0;
+  color: #b0b0b0;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -3604,8 +3618,8 @@ tbody.collapse.in {
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
-  border-bottom: 4px dashed;
-  border-bottom: 4px solid \9;
+  border-bottom: 7px dashed;
+  border-bottom: 7px solid \9;
   content: "";
 }
 .dropup .dropdown-menu,
@@ -4177,6 +4191,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar .navbar-right {
   float: right;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 25px;
 }
 .navbar .navbar-right span.glyphicon-refresh::before {
   color: #a8a8a8;
@@ -4184,6 +4202,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   top: 2px;
   left: 5px;
+}
+.navbar-fixed-bottom {
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 2px;
+  text-align: center;
+  z-index: 1000;
 }
 .breadcrumb {
   padding: 8px 15px;
@@ -5286,6 +5315,17 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+}
+.navbar-back {
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 2px;
+  text-align: center;
+  z-index: 1000;
 }
 .modal-open {
   overflow: hidden;
