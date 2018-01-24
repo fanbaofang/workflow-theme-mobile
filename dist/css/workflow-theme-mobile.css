@@ -1162,6 +1162,8 @@ hr {
 }
 article {
   margin-top: 50px;
+}
+article.article {
   margin-bottom: 20px;
   padding: 15px;
 }
@@ -3531,10 +3533,15 @@ tbody.collapse.in {
   border-left: 7px solid transparent;
   color: #68a4f2;
 }
+.drop-down {
+  height: 30px;
+}
 .dropup,
 .dropdown {
   position: relative;
-  width: 203px;
+  width: 120px;
+  float: right;
+  margin-top: 5px;
 }
 .dropup .btn,
 .dropdown .btn {
