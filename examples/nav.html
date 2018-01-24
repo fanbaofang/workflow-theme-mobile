@@ -8,17 +8,27 @@
     <link rel="stylesheet" href="../dist/css/workflow-theme-mobile.css">
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default">
         <div class="navbar-header">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <a class="navbar-brand" href="#">任务浏览</a>
-        </div>
-        <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="搜索关键字">
+            <div class="row">
+                <div class="col-xs-4">
+                    <a class="navbar-brand" href="#">
+                        <span class="glyphicon glyphicon-list"></span>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a>任务管理系统</a>
+                </div>
+                <div class="col-xs-4">
+                    <a class="navbar-right">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </div>
             </div>
-            <span class="glyphicon glyphicon-refresh"></span>
-        </form>
+        </div>
+    </nav>
+    <nav class="btn-fixed-bottom">
+        +新建任务
     </nav>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../dist/js/workflow-theme-mobile.js"></script>

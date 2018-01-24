@@ -1,11 +1,46 @@
-.navbar-back {
-    background: #fff;
+//
+//返回导航
+//
+.navbar.navbar-back {
+    width: 100%;
     height: 50px;
     line-height: 50px;
     position: fixed;
-    right: 0;
     left: 0;
-    bottom: 2px;
-    text-align: center;
-    z-index: 1000;
+    top: 0;
+    background: #fff;
+    .navbar-header {
+        .clearfix;
+        float: left;
+        margin-right: 20px;
+        margin-left: 10px;
+        width: 40%;
+        .glyphicon-chevron-left {
+            &::before {
+                color: #84a9e2;
+                font-size: 16px;
+            }
+        }
+        a {
+            color: #000;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    .navbar-right {
+        float: right;
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 25px;
+        span.glyphicon-refresh {
+            &::before {
+                color: #a8a8a8;
+                font-size: 18px;
+                position: relative;
+                top: 2px;
+                left: 5px;
+            }
+        }
+    }
 }
