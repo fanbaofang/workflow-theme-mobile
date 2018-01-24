@@ -4425,6 +4425,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: baseline;
   border-radius: .25em;
   margin: 1px 0;
+  width: 50px;
 }
 a.label:hover,
 a.label:focus {
