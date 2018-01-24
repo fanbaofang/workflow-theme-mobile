@@ -4415,7 +4415,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .label {
   display: inline;
-  padding: .2em .6em .3em;
+  padding: .5em .5em .5em;
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
@@ -4447,6 +4447,7 @@ a.label:focus {
 }
 .label-primary {
   background-color: #ffffff;
+  color: #333;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
