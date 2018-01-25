@@ -4449,8 +4449,13 @@ a.label:focus {
 }
 .label-primary {
   background-color: #ffffff;
+<<<<<<< HEAD
   color: #333;
   border: 1px solid #eee;
+=======
+  color: #000;
+  border: 1px solid #eeeeee;
+>>>>>>> sophie
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
@@ -4676,7 +4681,7 @@ a.thumbnail.active {
 }
 .progress {
   width: 150px;
-  height: 150px;
+  height: 60px;
   text-align: center;
 }
 .progress span {
@@ -4686,8 +4691,9 @@ a.thumbnail.active {
   font-size: 25px;
   color: #7aa8f2;
 }
-.progress span:last-child {
+.progress span:nth-child(2) {
   color: #cdcdcd;
+  margin-bottom: 10px;
 }
 .media {
   margin-top: 15px;
@@ -4956,6 +4962,33 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.panel.panel-progress {
+  padding-left: 20px;
+}
+.panel .left {
+  width: 60%;
+  float: left;
+}
+.panel .left .row {
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+.panel .left .row:last-child {
+  margin-bottom: 0;
+}
+.panel .left .row .col-xs-1 {
+  padding-left: 0;
+}
+.panel .left .row .col-xs-1 span::before {
+  font-size: 20px;
+  color: #d1cfd0;
+}
+.panel .right {
+  width: 30%;
+  height: 100px;
+  float: left;
+  border-left: 1px solid #eee;
 }
 .panel-body {
   padding: 15px;
@@ -5373,6 +5406,7 @@ button.close {
   left: 0;
   top: 0;
   background: #fff;
+  z-index: 1000;
 }
 .navbar.navbar-back .navbar-header {
   float: left;
@@ -5418,6 +5452,40 @@ button.close {
   position: relative;
   top: 2px;
   left: 5px;
+}
+.milestone {
+  text-align: left;
+}
+.milestone > li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.milestone-defalut {
+  border: thin solid #777777;
+  background: #777777;
+}
+.milestone-primary {
+  border: thin solid #6ca2fa;
+  background: #6ca2fa;
+}
+.milestone-success {
+  border: thin solid #5ab75d;
+  background: #5ab75d;
+}
+.milestone-info {
+  border: thin solid #6ca2fa;
+  background: #6ca2fa;
+}
+.milestone-warning {
+  border: thin solid #efac50;
+  background: #efac50;
+}
+.milestone-danger {
+  border: thin solid #d8524e;
+  background: #d8524e;
 }
 .modal-open {
   overflow: hidden;
