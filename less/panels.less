@@ -8,6 +8,33 @@
     border: 1px solid transparent;
     border-radius: @panel-border-radius;
     .box-shadow(0 1px 1px rgba(0, 0, 0, .05));
+    &.panel-progress {
+        padding-left: 20px;
+    }
+    .left {
+        width: 60%;
+        float: left;
+        .row {
+            &:last-child {
+                margin-bottom: 0;
+            }
+            margin-bottom: 10px;
+            margin-left: 0;
+            .col-xs-1 {
+                padding-left: 0;
+                span::before {
+                    font-size: 20px;
+                    color: #d1cfd0;
+                }
+            }
+        }
+    }
+    .right {
+        width: 30%;
+        height: 100px;
+        float: left;
+        border-left: 1px solid #eee;
+    }
 }
 
 // Panel contents
