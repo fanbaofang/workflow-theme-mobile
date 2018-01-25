@@ -3486,7 +3486,6 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   bottom: 2px;
-  text-align: center;
   z-index: 1000;
 }
 .fade {
@@ -4186,8 +4185,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 50px;
   position: fixed;
   left: 0;
-  top: 0;
   background: #fff;
+  z-index: 1000;
 }
 .navbar .navbar-header {
   float: left;
@@ -4258,7 +4257,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   right: 0;
   left: 0;
   bottom: 2px;
-  text-align: center;
   z-index: 1000;
 }
 .breadcrumb {
