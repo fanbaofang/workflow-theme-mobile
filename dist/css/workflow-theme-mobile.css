@@ -5497,6 +5497,9 @@ button.close {
   padding: 10px 10px 0 10px;
   background: #fff;
   z-index: 1001;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 .menu ul li {
   float: left;
