@@ -5495,6 +5495,7 @@ button.close {
   width: 100%;
   height: 320px;
   padding: 10px 10px 0 10px;
+  margin-bottom: 0;
   background: #fff;
   z-index: 1001;
   position: fixed;
