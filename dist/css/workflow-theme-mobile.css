@@ -1163,6 +1163,10 @@ hr {
 article {
   margin-top: 50px;
 }
+article.article {
+  margin-bottom: 20px;
+  padding: 10px;
+}
 h1,
 h2,
 h3,
@@ -2503,7 +2507,32 @@ label {
   font-size: 14px;
   font-weight: bold;
 }
-input[type="search"] {
+.search {
+  background: #fff;
+  width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.search span {
+  float: left;
+  margin: 7px 0 0 16px;
+}
+.search span::before {
+  font-size: 22px;
+  color: #eeeeee;
+}
+.search input {
+  float: left;
+  width: 90%;
+  border: 0;
+  outline: none;
+  text-indent: 15px;
+}
+.search input:focus {
+  outline-offset: -2px;
+}
+.search input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2533,7 +2562,7 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 1px;
+  padding-top: 4px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2541,7 +2570,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  padding: 6.5px 14px;
+  padding: 6.5px 7px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2595,7 +2624,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 22px;
+    line-height: 28px;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -2684,8 +2713,8 @@ fieldset[disabled] .checkbox label {
   cursor: not-allowed;
 }
 .form-control-static {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   margin-bottom: 0;
   min-height: 34px;
 }
@@ -2772,7 +2801,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 27.5px;
+  padding-right: 35px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2780,9 +2809,9 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   text-align: center;
   pointer-events: none;
 }
@@ -2959,11 +2988,11 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 1px;
+  padding-top: 4px;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 21px;
+  min-height: 24px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2974,7 +3003,7 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 1px;
+    padding-top: 4px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3003,7 +3032,7 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 0px 14px;
+  padding: 3px 7px;
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 4px;
@@ -3449,6 +3478,16 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+.btn-fixed-bottom {
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 2px;
+  z-index: 1000;
+}
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
@@ -3493,10 +3532,15 @@ tbody.collapse.in {
   border-left: 7px solid transparent;
   color: #68a4f2;
 }
+.drop-down {
+  height: 30px;
+}
 .dropup,
 .dropdown {
   position: relative;
-  width: 203px;
+  width: 120px;
+  float: right;
+  margin-top: 5px;
 }
 .dropup .btn,
 .dropdown .btn {
@@ -3658,6 +3702,14 @@ tbody.collapse.in {
 .btn-group > .btn.active,
 .btn-group-vertical > .btn.active {
   z-index: 2;
+}
+.btn-group .btn:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.btn-group .dropdown-toggle:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
@@ -3868,7 +3920,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 .input-group-addon {
-  padding: 0px 14px;
+  padding: 3px 7px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
@@ -4141,12 +4193,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 50px;
   position: fixed;
   left: 0;
-  top: 0;
+  background: #fff;
+  z-index: 1000;
 }
 .navbar .navbar-header {
   float: left;
   margin-right: 20px;
   margin-left: 10px;
+  width: 100%;
 }
 .navbar .navbar-header:before,
 .navbar .navbar-header:after {
@@ -4211,7 +4265,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   right: 0;
   left: 0;
   bottom: 2px;
-  text-align: center;
   z-index: 1000;
 }
 .breadcrumb {
@@ -4245,7 +4298,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 0px 14px;
+  padding: 3px 7px;
   line-height: 1.42857143;
   text-decoration: none;
   color: #ffffff;
@@ -4367,8 +4420,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   cursor: not-allowed;
 }
 .label {
-  display: inline;
-  padding: .2em .6em .3em;
+  display: inline-block;
+  padding: .5em .5em .5em;
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
@@ -4377,6 +4430,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
+  margin: 1px 0;
+  width: 50px;
 }
 a.label:hover,
 a.label:focus {
@@ -4400,6 +4455,8 @@ a.label:focus {
 }
 .label-primary {
   background-color: #ffffff;
+  color: #000;
+  border: 1px solid #eeeeee;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
@@ -4432,6 +4489,48 @@ a.label:focus {
 .label-danger[href]:hover,
 .label-danger[href]:focus {
   background-color: #c9302c;
+}
+.rad + label {
+  padding: 3px 0;
+  display: inline-block;
+  position: relative;
+}
+.rad + label::before {
+  content: '';
+  background: #fff;
+  border: 1px solid #adb1b2;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -1px;
+  left: -20px;
+  vertical-align: text-top;
+  border-radius: 50%;
+}
+.rad:checked + label:before {
+  content: '\2714';
+  color: #1473ee;
+}
+.rad-add + label {
+  padding: 3px 0;
+  display: inline-block;
+  position: relative;
+}
+.rad-add + label::before {
+  content: '';
+  background: #fff;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -1px;
+  left: -20px;
+  background: #e5e5e5;
+  vertical-align: text-top;
+  border-radius: 50%;
+}
+.rad-add + label + a {
+  color: #aeaeae;
+  text-decoration: none;
 }
 .badge {
   display: inline-block;
@@ -4625,7 +4724,7 @@ a.thumbnail.active {
 }
 .progress {
   width: 150px;
-  height: 150px;
+  height: 60px;
   text-align: center;
 }
 .progress span {
@@ -4635,8 +4734,9 @@ a.thumbnail.active {
   font-size: 25px;
   color: #7aa8f2;
 }
-.progress span:last-child {
+.progress span:nth-child(2) {
   color: #cdcdcd;
+  margin-bottom: 10px;
 }
 .media {
   margin-top: 15px;
@@ -4694,9 +4794,7 @@ a.thumbnail.active {
   position: relative;
   display: block;
   padding: 10px 15px;
-  margin-bottom: -1px;
   background-color: #fff;
-  border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 .list-group-item:before,
@@ -4907,6 +5005,33 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.panel.panel-progress {
+  padding-left: 20px;
+}
+.panel .left {
+  width: 60%;
+  float: left;
+}
+.panel .left .row {
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+.panel .left .row:last-child {
+  margin-bottom: 0;
+}
+.panel .left .row .col-xs-1 {
+  padding-left: 0;
+}
+.panel .left .row .col-xs-1 span::before {
+  font-size: 20px;
+  color: #d1cfd0;
+}
+.panel .right {
+  width: 30%;
+  height: 100px;
+  float: left;
+  border-left: 1px solid #eee;
 }
 .panel-body {
   padding: 15px;
@@ -5316,16 +5441,148 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-.navbar-back {
-  background: #fff;
+.navbar.navbar-back {
+  width: 100%;
   height: 50px;
   line-height: 50px;
   position: fixed;
-  right: 0;
   left: 0;
-  bottom: 2px;
-  text-align: center;
+  top: 0;
+  background: #fff;
   z-index: 1000;
+}
+.navbar.navbar-back .navbar-header {
+  float: left;
+  margin-right: 20px;
+  margin-left: 10px;
+  width: 40%;
+}
+.navbar.navbar-back .navbar-header:before,
+.navbar.navbar-back .navbar-header:after {
+  content: " ";
+  display: table;
+}
+.navbar.navbar-back .navbar-header:after {
+  clear: both;
+}
+.navbar.navbar-back .navbar-header:before,
+.navbar.navbar-back .navbar-header:after {
+  content: " ";
+  display: table;
+}
+.navbar.navbar-back .navbar-header:after {
+  clear: both;
+}
+.navbar.navbar-back .navbar-header .glyphicon-chevron-left::before {
+  color: #84a9e2;
+  font-size: 16px;
+}
+.navbar.navbar-back .navbar-header a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+.navbar.navbar-back .navbar-right {
+  float: right;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 25px;
+}
+.navbar.navbar-back .navbar-right span.glyphicon-refresh::before {
+  color: #a8a8a8;
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+}
+.milestone {
+  text-align: left;
+}
+.milestone > li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.milestone-defalut {
+  border: thin solid #777777;
+  background: #777777;
+}
+.milestone-primary {
+  border: thin solid #6ca2fa;
+  background: #6ca2fa;
+}
+.milestone-success {
+  border: thin solid #5ab75d;
+  background: #5ab75d;
+}
+.milestone-info {
+  border: thin solid #6ca2fa;
+  background: #6ca2fa;
+}
+.milestone-warning {
+  border: thin solid #efac50;
+  background: #efac50;
+}
+.milestone-danger {
+  border: thin solid #d8524e;
+  background: #d8524e;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+}
+.menu.in {
+  opacity: 1;
+}
+.menu ul {
+  width: 100%;
+  height: 320px;
+  padding: 10px 10px 0 10px;
+  margin-bottom: 0;
+  background: #fff;
+  z-index: 1001;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.menu ul li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  width: 33%;
+  height: 70px;
+  margin-bottom: 30px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.menu ul li a img {
+  width: 50px;
+  height: 50px;
+}
+.menu ul li a span {
+  display: block;
+  margin-top: 5px;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.backdrop.in {
+  opacity: .5;
 }
 .modal-open {
   overflow: hidden;

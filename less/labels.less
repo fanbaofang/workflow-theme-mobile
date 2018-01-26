@@ -1,64 +1,109 @@
 //
 // Labels
 // --------------------------------------------------
-
 .label {
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  color: @label-color;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
-
-  // Add hover effects, but only for links
-  a& {
-    &:hover,
-    &:focus {
-      color: @label-link-hover-color;
-      text-decoration: none;
-      cursor: pointer;
+    display: inline-block;
+    padding: .5em .5em .5em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: @label-color;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    margin: 1px 0; // Add hover effects, but only for links
+    width: 50px;
+    a& {
+        &:hover,
+        &:focus {
+            color: @label-link-hover-color;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    } // Empty labels collapse automatically (not available in IE8)
+    &:empty {
+        display: none;
+    } // Quick fix for labels in buttons
+    .btn & {
+        position: relative;
+        top: -1px;
     }
-  }
-
-  // Empty labels collapse automatically (not available in IE8)
-  &:empty {
-    display: none;
-  }
-
-  // Quick fix for labels in buttons
-  .btn & {
-    position: relative;
-    top: -1px;
-  }
 }
 
 // Colors
 // Contextual variations (linked labels get darker on :hover)
-
 .label-default {
-  .label-variant(@label-default-bg);
+    .label-variant(@label-default-bg);
 }
 
 .label-primary {
-  .label-variant(@label-primary-bg);
+    .label-variant(@label-primary-bg);
+    color: #000;
+    border: 1px solid #eeeeee;
 }
 
 .label-success {
-  .label-variant(@label-success-bg);
+    .label-variant(@label-success-bg);
 }
 
 .label-info {
-  .label-variant(@label-info-bg);
+    .label-variant(@label-info-bg);
 }
 
 .label-warning {
-  .label-variant(@label-warning-bg);
+    .label-variant(@label-warning-bg);
 }
 
 .label-danger {
-  .label-variant(@label-danger-bg);
+    .label-variant(@label-danger-bg);
+}
+
+//radio
+.rad+label {
+    padding: 3px 0;
+    display: inline-block;
+    position: relative;
+    &::before {
+        content: '';
+        background: #fff;
+        border: 1px solid #adb1b2;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: -1px;
+        left: -20px;
+        vertical-align: text-top;
+        border-radius: 50%;
+    }
+}
+
+.rad {
+    &:checked+label:before {
+        content: '\2714';
+        color: #1473ee;
+    }
+}
+
+.rad-add+label {
+    padding: 3px 0;
+    display: inline-block;
+    position: relative;
+    &::before {
+        content: '';
+        background: #fff;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: -1px;
+        left: -20px;
+        background: #e5e5e5;
+        vertical-align: text-top;
+        border-radius: 50%;
+    }
+}
+
+.rad-add+label+a {
+    color: #aeaeae;
+    text-decoration: none;
 }
