@@ -2562,7 +2562,7 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 1px;
+  padding-top: 4px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2570,7 +2570,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  padding: 6.5px 14px;
+  padding: 6.5px 7px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2624,7 +2624,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 22px;
+    line-height: 28px;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -2713,8 +2713,8 @@ fieldset[disabled] .checkbox label {
   cursor: not-allowed;
 }
 .form-control-static {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   margin-bottom: 0;
   min-height: 34px;
 }
@@ -2801,7 +2801,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 27.5px;
+  padding-right: 35px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2809,9 +2809,9 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   text-align: center;
   pointer-events: none;
 }
@@ -2988,11 +2988,11 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 1px;
+  padding-top: 4px;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 21px;
+  min-height: 24px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -3003,7 +3003,7 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 1px;
+    padding-top: 4px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3032,7 +3032,7 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 0px 14px;
+  padding: 3px 7px;
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 4px;
@@ -3920,7 +3920,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 .input-group-addon {
-  padding: 0px 14px;
+  padding: 3px 7px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
@@ -4298,7 +4298,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 0px 14px;
+  padding: 3px 7px;
   line-height: 1.42857143;
   text-decoration: none;
   color: #ffffff;
