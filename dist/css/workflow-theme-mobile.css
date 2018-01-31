@@ -5027,7 +5027,7 @@ button.list-group-item-danger.active:focus {
   padding-left: 20px;
 }
 .panel .left {
-  width: 60%;
+  width: 65%;
   float: left;
 }
 .panel .left .row {
@@ -5044,11 +5044,22 @@ button.list-group-item-danger.active:focus {
   font-size: 20px;
   color: #d1cfd0;
 }
+.panel .left .row.title {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  color: #7aa8f2;
+  font-size: 18px;
+}
 .panel .right {
   width: 30%;
   height: 100px;
   float: left;
   border-left: 1px solid #eee;
+}
+.panel .right .title {
+  margin: 20px;
+  color: #7aa8f2;
+  font-size: 18px;
 }
 .panel-body {
   padding: 15px;
