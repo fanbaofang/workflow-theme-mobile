@@ -26,7 +26,11 @@ module.exports = function(grunt) {
                     'js/modal.js',
                     'js/dropdown.js',
                     'js/tooltip.js',
-                    'js/popver.js'
+                    'js/popver.js',
+                    'js/bootstrap-datepicker.js',
+                    'js/bootstrap-datepicker.zh-CN.min.js',
+                    'js/bootstrap-select.js',
+                    'js/bootstrap-select-zh_CN.min.js'
                 ],
                 dest: 'dist/js/workflow-theme-mobile.js',
             },

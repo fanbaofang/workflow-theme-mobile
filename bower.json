@@ -1,27 +1,29 @@
 {
-    "name": "workflow-theme-mobile",
-    "homepage": "https://github.com/europeancastle/workflow-theme-mobile",
-    "authors": [
-        "epcastle 86824410@qq.com",
-        "sophie 1063432393@qq.com"
-    ],
-    "description": "lzzy for a workflow theme mobile project.",
-    "main": "less/workflow-theme-mobile.less",
-    "keywords": [
-        "workflow"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "devdependencies": {},
-    "devDependencies": {
-        "jquery": "^3.2.1",
-        "bootstrap": "^3.3.7",
-        "jquery-validation": "^1.17.0"
-    }
+  "name": "workflow-theme-mobile",
+  "homepage": "https://github.com/europeancastle/workflow-theme-mobile",
+  "authors": [
+    "epcastle 86824410@qq.com",
+    "sophie 1063432393@qq.com"
+  ],
+  "description": "lzzy for a workflow theme mobile project.",
+  "main": "less/workflow-theme-mobile.less",
+  "keywords": [
+    "workflow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devdependencies": {},
+  "devDependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "jquery-validation": "^1.17.0",
+    "bootstrap-datepicker": "^1.7.1",
+    "bootstrap-select": "^1.12.4"
+  }
 }
