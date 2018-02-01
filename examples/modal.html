@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航</title>
+    <link rel="stylesheet" href="../dist/css/workflow-theme-mobile.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-back" role="navigation">
+        <div class="navbar-header">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <a class="navbar-brand" href="#">返回</a>
+        </div>
+        <div class="navbar-right">
+            发布
+        </div>
+    </nav>
+    <article>
+        <a class="btn btn-success" data-target="#myModal" data-toggle="modal">批准</a>
+    </article>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-xs-3 control-label">办理部门</label>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-xs-3 control-label">审核领导</label>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="col-xs-6 control-label">审批建议或驳回内容：</label>
+                            <textarea class="form-control col-xs-12" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-default btn-lg btn-block">确定</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../dist/js/workflow-theme-mobile.js"></script>
+</body>
+</html>
