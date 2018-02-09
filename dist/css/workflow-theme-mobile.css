@@ -3611,7 +3611,7 @@ tbody.collapse.in {
   font-weight: normal;
   line-height: 1.42857143;
   border-bottom: 1px solid #b0b0b0;
-  color: #b0b0b0;
+  color: #777777;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -3631,7 +3631,7 @@ tbody.collapse.in {
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
-  color: #777777;
+  color: #b0b0b0;
 }
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
