@@ -5616,6 +5616,19 @@ button.close {
 .backdrop.in {
   opacity: .5;
 }
+.person-management {
+  background: #fff;
+}
+.person-management .row .col-xs-4 {
+  padding: 10px;
+}
+.person-management .row .col-xs-4 .num {
+  margin: 5px;
+}
+.person-management .row .col-xs-4 img {
+  width: 80px;
+  height: 80px;
+}
 .datepicker {
   border-radius: 4px;
   direction: ltr;
