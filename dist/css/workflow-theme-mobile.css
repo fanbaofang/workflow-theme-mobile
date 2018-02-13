@@ -7440,6 +7440,11 @@ select.selectpicker {
 .affix {
   position: fixed;
 }
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @-ms-viewport {
   width: device-width;
 }
