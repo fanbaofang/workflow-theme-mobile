@@ -4831,6 +4831,20 @@ a.thumbnail.active {
 .list-group-item:after {
   clear: both;
 }
+.list-group-item .col-xs-2,
+.list-group-item .col-xs-3,
+.list-group-item .col-xs-4,
+.list-group-item .col-xs-5,
+.list-group-item .col-xs-6,
+.list-group-item .col-xs-7,
+.list-group-item .col-xs-8,
+.list-group-item .col-xs-9,
+.list-group-item .col-xs-10,
+.list-group-item .row {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 a.list-group-item,
 button.list-group-item {
   color: #555;
