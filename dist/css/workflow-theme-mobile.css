@@ -301,7 +301,6 @@ th {
 }
 .glyphicon-heart:before {
   content: "\e005";
-  color: red;
 }
 .glyphicon-star:before {
   content: "\e006";
