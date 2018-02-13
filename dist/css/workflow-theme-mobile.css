@@ -4830,12 +4830,6 @@ a.thumbnail.active {
 .list-group-item:after {
   clear: both;
 }
-.list-group-item .col-xs-5,
-.list-group-item .row {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 a.list-group-item,
 button.list-group-item {
   color: #555;
@@ -7425,6 +7419,11 @@ select.selectpicker {
   text-shadow: none;
   background-color: transparent;
   border: 0;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .hidden {
   display: none !important;
