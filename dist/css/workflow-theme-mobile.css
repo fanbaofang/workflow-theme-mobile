@@ -3490,7 +3490,7 @@ input[type="button"].btn-block {
   width: 100%;
 }
 .btn-fixed-bottom {
-  background: #fff;
+  background: #54a941;
   height: 50px;
   line-height: 50px;
   position: fixed;
@@ -3499,6 +3499,9 @@ input[type="button"].btn-block {
   bottom: 0px;
   font-size: 16px;
   z-index: 1000;
+}
+.btn-fixed-bottom a {
+  color: #fff;
 }
 .fade {
   opacity: 0;
@@ -5009,11 +5012,12 @@ button.list-group-item-danger.active:focus {
 }
 .list-group-item-heading {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-top: 60px;
   height: 30px;
   line-height: 20px;
   text-align: center;
   font-size: 16px;
+  background: #fff;
 }
 .list-group-item-text {
   margin-bottom: 0;
@@ -5481,6 +5485,8 @@ button.close {
   left: 0;
   top: 0;
   background: #fff;
+  border-bottom: 1px solid #dedede;
+  box-shadow: 0px 5px 5px #dedede;
   z-index: 1000;
 }
 .navbar.navbar-back .navbar-header {
@@ -5506,7 +5512,7 @@ button.close {
   clear: both;
 }
 .navbar.navbar-back .navbar-header .glyphicon-chevron-left::before {
-  color: #84a9e2;
+  color: #4d4d4d;
   font-size: 16px;
 }
 .navbar.navbar-back .navbar-header a {
