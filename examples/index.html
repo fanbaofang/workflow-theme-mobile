@@ -25,46 +25,51 @@
     <article>
         <div class="form-group person-management">
             <div class="row">
-                <div class="col-xs-4 text-center">
-                    <a class="numeric">
-                            <img src="images/placeholder.jpg" />
-                            <div class="num">7</div>
-                            <div>待接受</div>
+                <div class="col-xs-6 text-center">
+                    <a class="numeric numeric-default" asp-action="Index" asp-controller="AcceptOrForward" asp-route-Search.Status="@AssignmentStatus.Unaccepted">
+                        <img src="images/placeholder.jpg" />
+                        <div class="numeric-header">4444</div>
+                        <div>待接受</div>
                     </a>
                 </div>
-                <div class="col-xs-4 text-center">
-                    <a class="numeric">
-                            <img src="images/placeholder.jpg" />
-                            <div class="num">7</div>
-                            <div>待接受</div>
-                    </a>
-                </div>
-                <div class="col-xs-4 text-center">
-                    <a class="numeric">
-                            <img src="images/placeholder.jpg" />
-                            <div class="num">7</div>
-                            <div>待接受</div>
+                <div class="col-xs-6 text-center">
+                    <a class="numeric numeric-primary" asp-action="Concern" asp-controller="Home">
+                        <img src="images/placeholder.jpg" />
+                        <div class="numeric-header">4</div>
+                        <div>已关注</div>
                     </a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-4 text-center">
-                    <a class="numeric">
-                            <img src="images/placeholder.jpg" />
-                            <div class="num">7</div>
-                            <div>待接受</div>
+                <div class="col-xs-6 text-center">
+                    <a class="numeric numeric-primary" asp-action="Index" asp-controller="Execution">
+                        <img src="images/placeholder.jpg" />
+                        <div class="numeric-header">4</div>
+                        <div>办理中</div>
                     </a>
                 </div>
-                <div class="col-xs-4 text-center">
-                    <img src="images/placeholder.jpg" />
-                    <div class="num">7</div>
-                    <div>待接受</div>
-                    <span class="glyphicon glyphicon-heart" title="已关注任务"></span>
+                <div class="col-xs-6 text-center">
+                    <a class="numeric numeric-info" asp-action="Index" asp-controller="Audit" asp-route-Search.Status="@AssignmentStatus.Unaudited">
+                        <img src="images/placeholder.jpg" />
+                        <div class="numeric-header">4</div>
+                        <div>待审核</div>
+                    </a>
                 </div>
-                <div class="col-xs-4 text-center">
-                    <img src="images/placeholder.jpg" />
-                    <div class="num">7</div>
-                    <div>待接受</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 text-center">
+                    <a class="numeric numeric-warning" asp-action="Index" asp-controller="Evaluation" asp-route-Search.Status="@AssignmentStatus.Unevaluation">
+                        <img src="images/placeholder.jpg" />
+                        <div class="numeric-header">4</div>
+                        <div>待评价</div>
+                    </a>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <a class="numeric numeric-danger" asp-action="Refuse" asp-controller="Home">
+                        <img src="images/placeholder.jpg" />
+                        <div class="numeric-header">4</div>
+                        <div>已驳回</div>
+                    </a>
                 </div>
             </div>
         </div>
