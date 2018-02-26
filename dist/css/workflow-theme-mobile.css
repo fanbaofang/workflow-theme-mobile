@@ -5603,8 +5603,7 @@ button.close {
   color: #000;
 }
 .menu ul li a img {
-  width: 45px;
-  height: 45px;
+  height: 40px;
 }
 .menu ul li a span {
   display: block;
