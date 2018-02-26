@@ -11,7 +11,7 @@
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "less.compile": {
-        "sourceMap": true,
+        "sourceMap": false,
         "compress": false,
         "out": "../dist/css/workflow-theme-mobile.css",
         "main": "./workflow-theme-mobile.less"
