@@ -13,12 +13,19 @@ module.exports = function(grunt) {
         },
         cssmin: {
             dist: {
-                files: {
-                    'dist/css/workflow-theme-mobile.min.css': [
-                        'dist/css/workflow-theme-mobile.css'
-                    ]
-                }
+                options: {
+                    sourceMap: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'dist/css',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'dist/css',
+                    ext: '.min.css',
+                }],
+
             }
+
         },
         concat: {
             dist: {
@@ -36,12 +43,17 @@ module.exports = function(grunt) {
             },
         },
         uglify: {
+            options: {
+                sourceMap: true
+            },
             dist: {
-                files: {
-                    'dist/js/workflow-theme-mobile.min.js': [
-                        'dist/js/workflow-theme-mobile.js'
-                    ]
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'dist/js',
+                    src: ['*.js', '!*.min.js'],
+                    dest: 'dist/js',
+                    ext: '.min.js',
+                }]
             }
         }
     });
