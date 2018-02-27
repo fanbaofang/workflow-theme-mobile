@@ -12,11 +12,26 @@
 
 .list-group-item {
     position: relative;
-    display: block;
-    padding: 10px 15px; //margin-bottom: -1px;
+    display: block; //padding: 10px 15px; //margin-bottom: -1px;
     background-color: @list-group-bg; //border-top: 1px solid @list-group-border;
     border-bottom: 1px solid @list-group-border;
     .clearfix();
+    a {
+        padding: 10px 15px;
+    }
+    a.left {
+        .row {
+            margin: 10px 0;
+            span.level {
+                color: #fe1111;
+            }
+        }
+    }
+    a.right {
+        background: #f2f2f2;
+        height: 120px;
+        line-height: 95px;
+    }
 }
 
 a.list-group-item,
