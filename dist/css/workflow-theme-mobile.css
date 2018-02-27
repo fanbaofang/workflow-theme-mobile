@@ -4847,6 +4847,7 @@ a.thumbnail.active {
 .list-group-item {
   position: relative;
   display: block;
+  padding: 10px 15px;
   background-color: #fff;
   border-bottom: 1px solid #eeeeee;
 }
@@ -4866,16 +4867,16 @@ a.thumbnail.active {
 .list-group-item:after {
   clear: both;
 }
-.list-group-item a {
+.list-group-item-default a {
   padding: 10px 15px;
 }
-.list-group-item a.left .row {
+.list-group-item-default a.left .row {
   margin: 10px 0;
 }
-.list-group-item a.left .row span.level {
+.list-group-item-default a.left .row span.level {
   color: #fe1111;
 }
-.list-group-item a.right {
+.list-group-item-default a.right {
   background: #f2f2f2;
   height: 120px;
   line-height: 95px;
