@@ -4873,6 +4873,22 @@ a.thumbnail.active {
   background-color: #fff;
   border-bottom: 1px solid #eeeeee;
 }
+.list-group-item-default:before,
+.list-group-item-default:after {
+  content: " ";
+  display: table;
+}
+.list-group-item-default:after {
+  clear: both;
+}
+.list-group-item-default:before,
+.list-group-item-default:after {
+  content: " ";
+  display: table;
+}
+.list-group-item-default:after {
+  clear: both;
+}
 .list-group-item-default a {
   padding: 10px 15px;
 }
