@@ -3739,18 +3739,18 @@ tbody.collapse.in {
 .btn-group-vertical {
   position: relative;
   display: inline-block;
-  width: 175px;
+  width: 250px;
   vertical-align: middle;
 }
 .btn-group > .list-group,
 .btn-group-vertical > .list-group {
   margin-top: 0;
+  margin-bottom: 0;
 }
 .btn-group > .list-group > .list-group-item,
 .btn-group-vertical > .list-group > .list-group-item {
   text-align: center;
   padding: 0;
-  margin-bottom: 0;
 }
 .btn-group > .list-group > .list-group-item > .btn,
 .btn-group-vertical > .list-group > .list-group-item > .btn {
