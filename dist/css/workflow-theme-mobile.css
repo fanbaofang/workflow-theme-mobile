@@ -3739,19 +3739,33 @@ tbody.collapse.in {
 .btn-group-vertical {
   position: relative;
   display: inline-block;
+  width: 175px;
   vertical-align: middle;
+}
+.btn-group > .list-group,
+.btn-group-vertical > .list-group {
+  margin-top: 0;
+}
+.btn-group > .list-group > .list-group-item,
+.btn-group-vertical > .list-group > .list-group-item {
+  text-align: center;
+  padding: 0;
+}
+.btn-group > .list-group > .list-group-item > .btn,
+.btn-group-vertical > .list-group > .list-group-item > .btn {
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 0;
+  border-radius: 0;
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {
   position: relative;
   float: left;
 }
-.btn-group > .btn:hover,
-.btn-group-vertical > .btn:hover,
-.btn-group > .btn:focus,
-.btn-group-vertical > .btn:focus,
-.btn-group > .btn:active,
-.btn-group-vertical > .btn:active,
 .btn-group > .btn.active,
 .btn-group-vertical > .btn.active {
   z-index: 2;
