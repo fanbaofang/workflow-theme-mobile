@@ -1077,6 +1077,22 @@ body {
   color: #333333;
   background-color: #eeeeee;
 }
+body:before,
+body:after {
+  content: " ";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body:before,
+body:after {
+  content: " ";
+  display: table;
+}
+body:after {
+  clear: both;
+}
 input,
 button,
 select,
@@ -1162,6 +1178,22 @@ hr {
 }
 article {
   margin-top: 50px;
+}
+article:before,
+article:after {
+  content: " ";
+  display: table;
+}
+article:after {
+  clear: both;
+}
+article:before,
+article:after {
+  content: " ";
+  display: table;
+}
+article:after {
+  clear: both;
 }
 article.article {
   margin-bottom: 20px;
@@ -4809,6 +4841,7 @@ a.thumbnail.active {
 }
 .list-group {
   margin-bottom: 20px;
+  margin-top: 10px;
   padding-left: 0;
 }
 .list-group-item {
@@ -5012,7 +5045,6 @@ button.list-group-item-danger.active:focus {
   border-color: #a94442;
 }
 .list-group-item-heading {
-  margin-top: 60px;
   border-bottom: 1px solid #eee;
   height: 40px;
   line-height: 40px;
@@ -7649,4 +7681,3 @@ select.selectpicker {
     display: none !important;
   }
 }
-/*# sourceMappingURL=./workflow-theme-mobile.css.map */
