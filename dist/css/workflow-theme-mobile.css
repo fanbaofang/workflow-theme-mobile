@@ -3739,7 +3739,7 @@ tbody.collapse.in {
 .btn-group-vertical {
   position: relative;
   display: inline-block;
-  width: 250px;
+  width: 200px;
   vertical-align: middle;
 }
 .btn-group > .list-group,
@@ -4907,6 +4907,9 @@ a.thumbnail.active {
 .list-group-item-default a {
   padding: 10px 15px;
 }
+.list-group-item-default a.left {
+  padding-left: 30px;
+}
 .list-group-item-default a.left .row {
   margin: 10px 0;
 }
@@ -4917,6 +4920,9 @@ a.thumbnail.active {
   background: #f2f2f2;
   height: 120px;
   line-height: 95px;
+}
+.list-group-item-default a.right img {
+  width: 40px;
 }
 a.list-group-item,
 button.list-group-item {
@@ -5685,6 +5691,7 @@ button.close {
 .menu ul li a {
   text-decoration: none;
   color: #000;
+  display: block;
 }
 .menu ul li a img {
   height: 40px;
