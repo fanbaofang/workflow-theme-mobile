@@ -5153,9 +5153,10 @@ button.list-group-item-danger.active:focus {
   height: 100px;
   float: left;
   border-left: 1px solid #eee;
+  padding-left: 15px;
 }
 .panel .right .title {
-  margin: 15px;
+  margin: 15px 0 15px 0;
   color: #7aa8f2;
   font-size: 18px;
 }
