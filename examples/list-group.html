@@ -42,6 +42,69 @@
                     <img src="images/placeholder.jpg" style="width:40px;">
                 </a>
             </li>
+            <li class="list-group-item-default">
+                <a class="col-xs-7 left" href="/Browse/Detail/3f33e51c-0d28-45f1-baf7-afc6f273f2c2?returnUrl=%2FBrowse">
+                    <div class="row">
+                        名称:1
+                    </div>
+                    <div class="row">等级:<span class="level">普通</span></div>
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </div>
+                        <div class="col-xs-8">
+                            <ul class="milestone" style="padding:0">
+                                <li class="milestone-primary"></li>
+                                <li class="milestone-primary"></li>
+                                <li class="milestone-primary"></li>
+                                <li class="milestone-primary"></li>
+                                <li class="milestone-primary"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a class="col-xs-5 right text-center">
+                    <span> 5%</span>
+                    <span>任务进度</span>
+                </a>
+            </li>
+            <div class="panel panel-default panel-progress">
+                <div class="panel-body">
+                    <div class="left">
+                        <div class="row">
+                            <div class="btn-group btn-group-vertical">
+                                <label class="btn label label-primary">@Html.DisplayFor(t => item.Type)</label>
+                                <label class="btn label label-info">@Html.DisplayFor(t => item.Level)</label>
+                            </div>
+                            <label>
+                                </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </div>
+                            <div class="col-xs-8">
+                                <ul class="milestone" style="padding:0">
+                                    <li class="milestone-primary"></li>
+                                    <li class="milestone-primary"></li>
+                                    <li class="milestone-primary"></li>
+                                    <li class="milestone-primary"></li>
+                                    <li class="milestone-primary"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="progress">
+                            <span> @Html</span>
+                            <span>任务进度</span>
+                            <div class="btn-group">
+                                <a class="btn btn-primary" asp-action="Start" asp-route-id="@item.Index">开始</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </ul>
     </article>
     <script src="../bower_components/jquery/dist/jquery.js"></script>

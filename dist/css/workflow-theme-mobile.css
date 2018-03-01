@@ -3735,24 +3735,20 @@ tbody.collapse.in {
     right: auto;
   }
 }
-.btn-group,
 .btn-group-vertical {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 100%;
 }
-.btn-group > .list-group,
 .btn-group-vertical > .list-group {
   margin-top: 0;
   margin-bottom: 0;
 }
-.btn-group > .list-group > .list-group-item,
 .btn-group-vertical > .list-group > .list-group-item {
   text-align: center;
   padding: 0;
 }
-.btn-group > .list-group > .list-group-item > .btn,
 .btn-group-vertical > .list-group > .list-group-item > .btn {
   padding: 0;
   border: none;
@@ -3762,12 +3758,10 @@ tbody.collapse.in {
   margin-bottom: 0;
   border-radius: 0;
 }
-.btn-group > .btn,
 .btn-group-vertical > .btn {
   position: relative;
   float: left;
 }
-.btn-group > .btn.active,
 .btn-group-vertical > .btn.active {
   z-index: 2;
 }
@@ -4791,7 +4785,7 @@ a.thumbnail.active {
   color: #843534;
 }
 .progress {
-  width: 150px;
+  width: auto;
   height: 60px;
   text-align: center;
 }
@@ -4904,24 +4898,22 @@ a.thumbnail.active {
 .list-group-item-default:after {
   clear: both;
 }
-.list-group-item-default a {
-  padding: 10px 15px;
-}
-.list-group-item-default a.left {
+.list-group-item-default .left {
   padding-left: 30px;
 }
-.list-group-item-default a.left .row {
+.list-group-item-default .left .row {
   margin: 10px 0;
 }
-.list-group-item-default a.left .row span.level {
+.list-group-item-default .left .row span.level {
   color: #fe1111;
 }
-.list-group-item-default a.right {
+.list-group-item-default .right {
+  padding: 10px 15px;
   background: #f2f2f2;
   height: 120px;
   line-height: 95px;
 }
-.list-group-item-default a.right img {
+.list-group-item-default .right img {
   width: 40px;
 }
 a.list-group-item,
