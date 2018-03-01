@@ -4876,6 +4876,9 @@ a.thumbnail.active {
 .list-group-item:after {
   clear: both;
 }
+.list-group-item.disabled a {
+  background: #eee;
+}
 .list-group-item-default {
   position: relative;
   display: block;
