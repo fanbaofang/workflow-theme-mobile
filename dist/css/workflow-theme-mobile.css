@@ -5581,7 +5581,7 @@ button.close {
   float: left;
   margin-right: 20px;
   margin-left: 10px;
-  width: 40%;
+  width: 100%;
 }
 .navbar.navbar-back .navbar-header:before,
 .navbar.navbar-back .navbar-header:after {
@@ -5599,14 +5599,22 @@ button.close {
 .navbar.navbar-back .navbar-header:after {
   clear: both;
 }
-.navbar.navbar-back .navbar-header .glyphicon-chevron-left::before {
-  color: #4d4d4d;
-  font-size: 16px;
+.navbar.navbar-back .navbar-header .title {
+  font-size: 18px;
 }
 .navbar.navbar-back .navbar-header a {
   color: #000;
   font-size: 18px;
   font-weight: 500;
+  display: inline-block;
+  width: 100%;
+}
+.navbar.navbar-back .navbar-header a.back img {
+  width: 16px;
+}
+.navbar.navbar-back .navbar-header a.refresh img {
+  width: 25px;
+  margin-right: 15px;
 }
 .navbar.navbar-back .navbar-right {
   float: right;
@@ -5614,13 +5622,6 @@ button.close {
   font-size: 16px;
   font-weight: 500;
   margin-right: 25px;
-}
-.navbar.navbar-back .navbar-right span.glyphicon-refresh::before {
-  color: #a8a8a8;
-  font-size: 18px;
-  position: relative;
-  top: 2px;
-  left: 5px;
 }
 .milestone {
   text-align: left;

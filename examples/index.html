@@ -10,17 +10,22 @@
 <style>
 </style>
 <body>
-    <nav class="navbar navbar-default navbar-back" role="navigation">
+    <nav class="navbar navbar-back navbar-default">
         <div class="navbar-header">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <a class="navbar-brand" href="#">任务浏览</a>
-        </div>
-        <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="搜索关键字">
+            <div class="col-xs-3">
+                <a class="back" href="@Html.Encode(Model.ReturnUrl)">
+                    <img src="images/back.png"/>
+                </a>
             </div>
-            <span class="glyphicon glyphicon-refresh"></span>
-        </form>
+            <div class="col-xs-6 text-center title">
+                待发布任务
+            </div>
+            <div class="col-xs-3 text-right">
+                <a class="refresh" asp-action="SignOut" asp-controller="Account">
+                    <img src="images/refresh.png"/>
+                </a>
+            </div>
+        </div>
     </nav>
     <article>
         <div class="form-group person-management">
