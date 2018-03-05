@@ -4909,8 +4909,14 @@ a.thumbnail.active {
 .list-group-item-default .left .row {
   margin: 10px 0;
 }
-.list-group-item-default .left .row span.level {
-  color: #fe1111;
+.list-group-item-default .left .row span.level.default {
+  color: #000;
+}
+.list-group-item-default .left .row span.level.info {
+  color: #3e86f4;
+}
+.list-group-item-default .left .row span.level.danger {
+  color: #fd6060;
 }
 .list-group-item-default .right {
   padding: 10px 15px;
