@@ -5687,6 +5687,7 @@ button.close {
 }
 .menu ul li {
   float: left;
+  position: relative;
   list-style: none;
   text-align: center;
   width: 33%;
@@ -5704,6 +5705,24 @@ button.close {
 .menu ul li a span {
   display: block;
   margin-top: 15px;
+}
+.menu > ul > li > .small {
+  height: 100px;
+  position: absolute;
+  left: 50px;
+  top: 74px;
+  width: 340px;
+  background: #4b494e;
+  display: none;
+}
+.menu > ul > li > .small li {
+  width: 100px;
+  height: 85px;
+  float: left;
+  margin: 10px 0 0 0;
+}
+.menu > ul > li > .small li a {
+  color: #fff;
 }
 .backdrop {
   position: fixed;
