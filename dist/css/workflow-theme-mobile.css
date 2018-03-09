@@ -5771,7 +5771,7 @@ button.close {
   background-color: #000;
   display: none;
 }
-.backdrop-small .in {
+.backdrop-small.in {
   opacity: .5;
 }
 .datepicker {
