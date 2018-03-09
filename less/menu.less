@@ -45,33 +45,30 @@
 }
 
 .menu-nest {
-    outline: 20px solid #c3d7fa; 
+    outline: 20px solid #c3d7fa;
     position: absolute;
     top: 90px;
     left: 20px;
     right: 20px;
     padding: 0;
     background: #3a6fcb;
+    z-index:1050;
+    display: none;
     .clearfix();
     .list-unstyled();
     >li {
         float: left;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin: 15px;
         padding: 10px;
         >a {
             color: #fff;
             >img {
                 .square(45px)
             }
-            >div{
+            >div {
                 margin-top: 10px;
             }
         }
-
-    }
-    >li:first-child {
-        margin-left: 15px;
     }
 }
 
@@ -84,6 +81,20 @@
     z-index: 1040;
     background-color: #000;
     &.in {
+        opacity: .5;
+    }
+}
+
+.backdrop-small {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    background-color: #000;
+    display: none;
+    .in {
         opacity: .5;
     }
 }

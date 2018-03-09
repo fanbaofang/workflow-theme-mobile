@@ -5713,6 +5713,8 @@ button.close {
   right: 20px;
   padding: 0;
   background: #3a6fcb;
+  z-index: 1050;
+  display: none;
   padding-left: 0;
   list-style: none;
 }
@@ -5734,8 +5736,7 @@ button.close {
 }
 .menu-nest > li {
   float: left;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px;
   padding: 10px;
 }
 .menu-nest > li > a {
@@ -5748,9 +5749,6 @@ button.close {
 .menu-nest > li > a > div {
   margin-top: 10px;
 }
-.menu-nest > li:first-child {
-  margin-left: 15px;
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -5761,6 +5759,19 @@ button.close {
   background-color: #000;
 }
 .backdrop.in {
+  opacity: .5;
+}
+.backdrop-small {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  background-color: #000;
+  display: none;
+}
+.backdrop-small .in {
   opacity: .5;
 }
 .datepicker {
