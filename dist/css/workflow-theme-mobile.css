@@ -4860,7 +4860,7 @@ a.thumbnail.active {
   display: block;
   padding: 10px 15px;
   background-color: #fff;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #bbbaba;
 }
 .list-group-item:before,
 .list-group-item:after {
